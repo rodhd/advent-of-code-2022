@@ -1,6 +1,8 @@
 package Common
 
-abstract class AoCSolution(val day: String) {
+abstract class AoCSolution() {
+
+    abstract val day: String
     abstract fun FirstSolution()
 
     abstract fun SecondSolution()

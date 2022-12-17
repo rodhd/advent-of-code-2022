@@ -1,5 +1,5 @@
 import Common.SolutionFactory.generateSolution
-import Solutions.DayOne
+
 fun main(args: Array<String>) {
     println("Please enter the day:")
     val day = readln()

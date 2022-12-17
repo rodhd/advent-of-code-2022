@@ -2,8 +2,8 @@ package Solutions
 
 import Common.AoCSolution
 
-class DayOne(day: String) : AoCSolution(day) {
-
+class Day_1() : AoCSolution() {
+    override val day = "1"
     override fun FirstSolution() {
         val input = readInputAsString()
             .split("\n\n")

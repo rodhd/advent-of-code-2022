@@ -3,7 +3,8 @@ package Solutions
 import Common.AoCSolution
 import java.lang.IllegalArgumentException
 
-class DayTwo(day: String) : AoCSolution(day) {
+class Day_2() : AoCSolution() {
+    override val day = "2"
     override fun FirstSolution() {
         var value = readInputAsListOfLines()
             .map {x -> calculateRoundScore(x)}
