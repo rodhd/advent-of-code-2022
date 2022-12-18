@@ -13,5 +13,5 @@ abstract class AoCSolution() {
     }
 
     fun readInputAsListOfLines(): List<String>
-        = this.javaClass.getResourceAsStream("/inputs/input-$day.txt").bufferedReader().readLines()
+        = this.javaClass.getResourceAsStream("/inputs/input-$day.txt")?.bufferedReader()?.readLines() ?: listOf("not used")
 }

@@ -2,6 +2,7 @@ package Solutions
 
 import Common.AoCSolution
 
+@Suppress("unused")
 class Day_3(): AoCSolution() {
     override val day = "3"
     override fun FirstSolution() {
@@ -16,7 +17,7 @@ class Day_3(): AoCSolution() {
     }
 
     fun findCommonItemPriority(rucksack: String): Int {
-        var (firstHalf, secondHalf) = Pair(
+        val (firstHalf, secondHalf) = Pair(
             rucksack.toCharArray().slice(0..rucksack.length/2 - 1).toSet(),
             rucksack.toCharArray().slice(rucksack.length/2 .. rucksack.length - 1).toSet())
 
@@ -37,7 +38,7 @@ class Day_3(): AoCSolution() {
         for(i in 0..rucksacks.lastIndex step 3) {
             val group = rucksacks.slice(i..i+2).map {x -> x.toCharArray().toList()}
             val commonItem = group[0].intersect(group[1]).intersect(group[2]).first().code
-            score += convertToPriority(commonItem);
+            score += convertToPriority(commonItem)
         }
         return score
     }

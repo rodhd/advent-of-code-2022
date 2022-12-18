@@ -3,17 +3,18 @@ package Solutions
 import Common.AoCSolution
 import java.lang.IllegalArgumentException
 
+@Suppress("unused")
 class Day_2() : AoCSolution() {
     override val day = "2"
     override fun FirstSolution() {
-        var value = readInputAsListOfLines()
+        val value = readInputAsListOfLines()
             .map {x -> calculateRoundScore(x)}
             .sum()
         println(value)
     }
 
     override fun SecondSolution() {
-        var value = readInputAsListOfLines()
+        val value = readInputAsListOfLines()
             .map {x -> calculateRoundScoreAlternate(x)}
             .sum()
         println(value)

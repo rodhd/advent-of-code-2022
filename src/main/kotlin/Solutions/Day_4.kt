@@ -2,11 +2,12 @@ package Solutions
 
 import Common.AoCSolution
 
+@Suppress("unused")
 class Day_4: AoCSolution() {
     override val day = "4"
 
     override fun FirstSolution() {
-        var r = readInputAsListOfLines()
+        val r = readInputAsListOfLines()
             .map {x -> isFullOverlap(x)}
             .filter { x -> x }
             .size
@@ -15,7 +16,7 @@ class Day_4: AoCSolution() {
     }
 
     override fun SecondSolution() {
-        var r = readInputAsListOfLines()
+        val r = readInputAsListOfLines()
             .map {x -> isPartialOverlap(x)}
             .filter { x -> x }
             .size
@@ -40,7 +41,7 @@ class Day_4: AoCSolution() {
     }
 
     private fun generateAssignmets(assignmentPairs: String): Pair<Set<Int>, Set<Int>> {
-        var r = assignmentPairs
+        val r = assignmentPairs
             .split(",")
             .map {x -> x.split("-")}
             .map {y -> Integer.parseInt(y[0])..Integer.parseInt(y[1])}
