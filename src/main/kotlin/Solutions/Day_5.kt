@@ -2,6 +2,7 @@ package Solutions
 
 import Common.AoCSolution
 
+@Suppress("unused")
 class Day_5: AoCSolution() {
     override val day = "5"
 
