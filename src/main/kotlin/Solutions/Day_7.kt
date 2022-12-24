@@ -2,11 +2,12 @@ package Solutions
 
 import Common.AoCSolution
 
+@Suppress("unused")
 class Day_7: AoCSolution() {
     override val day = "7"
 
     override fun FirstSolution() {
-        val input = readInputAsListOfLines()
+        /*val input = readInputAsListOfLines()
         var fileSystem = FileSystem()
         for(l in input) {
             fileSystem.instructionParse(l)
@@ -22,7 +23,7 @@ class Day_7: AoCSolution() {
             .map{x -> Pair(x.key, x.value)}
             .sortedBy { x -> x.second }
             .find { x -> x.second >= 30000000 - freeSpace }
-            !!.second)
+            !!.second)*/
     }
 
     override fun SecondSolution() {
@@ -41,10 +42,10 @@ class Day_7: AoCSolution() {
         val directoryRegex = Regex("dir (\\w+)")
         val goToDirectoryRegex = Regex("\\$ cd (\\w+)")
         val fileRegex = Regex("(\\d+) ([\\w.]+)")
-        var navigator = Directory("/", null)
+        //var navigator = Directory("/", null)
 
         fun instructionParse(instruction: String) {
-            if(instruction == "\$ cd /") {
+            /*if(instruction == "\$ cd /") {
                 navigator = navigator.getOutermost()
             }
             if(instruction == "\$ cd ..") {
@@ -60,7 +61,7 @@ class Day_7: AoCSolution() {
             if(goToDirectoryRegex.matches(instruction)) {
                 val matches = goToDirectoryRegex.matchEntire(instruction)!!.groupValues
                 navigator = navigator.getSubdirectory(matches[1])
-            }
+            }*/
         }
     }
 
